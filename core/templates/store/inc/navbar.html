@@ -1,0 +1,20 @@
+{% load static %}
+<nav class="navbar">
+    <!-- Logo de la barra de navegación -->
+  <a class="navbar-brand" href="{% url "home" %}">
+    <img src="{% static "core/img/Paw.png" %}" alt="PawPalace Logo">
+  </a>
+    <!-- Enlaces de navegación -->
+    <a class="nav-link" href="{% url "home" %}">Inicio</a>
+    <a class="nav-link" href="">Perros</a>
+    <a class="nav-link active" href="">Gatos</a>
+    <!-- Botón de inicio de sesión -->
+    <a id="login" class="nav-link login-btn" href="{% url "login" %}">Iniciar Sesión</a>
+    <a id="login" class="nav-link login-btn" href="{% url "register" %}">Registarse</a>
+    <a href="" class="cart-link">
+      <button class="btn cart-btn">
+        <img src="{% static "core/img/carrito.svg" %}" alt="Carrito">
+        <span id="cart-counter">0</span>
+      </button>
+    </a>    
+  </nav>
